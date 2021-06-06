@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <search-field />
+    <package-table />
+    <package-details />
+    <c-footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import SearchField from "@/components/SearchField";
+import PackageTable from "@/components/PackageTable";
+import PackageDetails from "@/components/PackageDetails";
+import CFooter from "@/components/CommonFooter";
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    SearchField,
+    PackageTable,
+    PackageDetails,
+    CFooter
   },
 };
 </script>
@@ -19,10 +26,10 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  padding: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
